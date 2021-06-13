@@ -9,22 +9,29 @@ namespace GradeBook
         // array is a collection of objects
         static void Main(string[] args)
         {
-            // Example 1
-            // Add Value to variable and use mathmatical operators
-            // create 2 variable with type double - Type definition is explicit (double type is for float numbers)
-            double x = 34.1;
-            double y = 10.3;
+            // Exercise 1
+            // Initialise a new array that can hold 3 numbers
+            double[]numbers = new double[3];
+            // Add 3 number to each position in the array - Individual statememnts
+            numbers[0] = 12.7;
+            numbers[1] = 10.3;
+            numbers[2] = 6.11;
+            // Add each number in the array and write the result
+            var result = numbers[0];
+            result = result + numbers [1];
+            result = result + numbers [2];
+            Console.WriteLine(result);
 
-            var result1 = x + y;
-            Console.WriteLine(result1);
-
-            // Example 2
-            // create 2 variable using var type keyword - Type definition is not explicit, 
-            // var automatically figures out type based on the context of what is happining.
-            var a = 34.1;
-            var b = 10.4;
-
-            var result2 = a + b;
+            // Exercise 2 - Simplify the above code
+            // Initialise a new array that can hold 3 numbers and add number to the array (array initialization syntax)
+            var numbers2 = new [] { 12.7, 10.3, 6.11, 4.1};
+            
+            //add a foreach loop statement to iterate through all numbers in the array and add them to the result variable
+            var result2 = 0.0;
+            foreach (double number2 in numbers2)
+            {
+            result2 += number2;
+            }
             Console.WriteLine(result2);
 
             // An If statement to check that the args array is not empty - Error Handling
