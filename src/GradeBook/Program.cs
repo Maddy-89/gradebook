@@ -28,7 +28,10 @@ namespace GradeBook
             {
             result += number;
             }
-            Console.WriteLine(result);
+            //Compute an Average for the number stored in the Grades List
+            result /= grades.Count;
+            Console.WriteLine($"The average grade is {result:N1}");
+
 
             // An If statement to check that the args array is not empty - Error Handling
             if (args.Length > 0) 
