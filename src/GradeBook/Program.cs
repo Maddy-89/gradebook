@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace GradeBook
 {
@@ -9,30 +10,25 @@ namespace GradeBook
         // array is a collection of objects
         static void Main(string[] args)
         {
-            // Exercise 1
-            // Initialise a new array that can hold 3 numbers
-            double[]numbers = new double[3];
-            // Add 3 number to each position in the array - Individual statememnts
-            numbers[0] = 12.7;
-            numbers[1] = 10.3;
-            numbers[2] = 6.11;
-            // Add each number in the array and write the result
-            var result = numbers[0];
-            result = result + numbers [1];
-            result = result + numbers [2];
-            Console.WriteLine(result);
+            // initialize a list called grades of type double for foating point numbers
+            // List<double> grades = new List<double>() ;
 
-            // Exercise 2 - Simplify the above code
-            // Initialise a new array that can hold 3 numbers and add number to the array (array initialization syntax)
-            var numbers2 = new [] { 12.7, 10.3, 6.11, 4.1};
-            
-            //add a foreach loop statement to iterate through all numbers in the array and add them to the result variable
-            var result2 = 0.0;
-            foreach (double number2 in numbers2)
+            // initialize an Implicit List
+            var grades = new List<double>() { 12.7, 10.3, 6.11, 4.1}; 
+
+            // Add value to list
+            grades.Add(56.1);
+
+            // Index into the list to see the first value
+            // grades[0];
+
+            //add a foreach loop statement to iterate through all numbers in the list and add them to the result variable
+            var result = 0.0;
+            foreach (var number in grades)
             {
-            result2 += number2;
+            result += number;
             }
-            Console.WriteLine(result2);
+            Console.WriteLine(result);
 
             // An If statement to check that the args array is not empty - Error Handling
             if (args.Length > 0) 
