@@ -10,10 +10,10 @@ namespace GradeBook
         // array is a collection of objects
         static void Main(string[] args)
         {
-            // Create a book variable
+            // Create a book variable from class Book
             var book = new Book();
             book.AddGrade(89.1);
-            
+
             // initialize a list called grades of type double for foating point numbers
             // List<double> grades = new List<double>() ;
 
