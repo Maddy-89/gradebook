@@ -14,9 +14,12 @@ namespace GradeBook
     {
         // Create an explicit constructor to initialize grades
         // Method on the class
-        public Book()
+        // Add a constructor Parameter
+        public Book(string name)
         {
             grades = new List<double>();
+            // this.object - use when field has same name as parameter - explicit variable - on this object
+            this.name = name;
         }
         public void AddGrade(double grade)
         {
@@ -24,6 +27,7 @@ namespace GradeBook
         }
 
         // State - Add a field - to access grades 
-        List<double> grades; 
+        private List<double> grades; 
+        private string name;
     }
 }
