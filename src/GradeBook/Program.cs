@@ -29,13 +29,22 @@ namespace GradeBook
 
             //add a foreach loop statement to iterate through all numbers in the list and add them to the result variable
             var result = 0.0;
+            var highGrade = double.MinValue;
+            var lowGrade = double.MaxValue;
+
             foreach (var number in grades)
-            {
-            result += number;
+            {   
+                lowGrade = Math.Min(number, lowGrade); 
+                highGrade = Math.Max(number, highGrade);
+
+                result += number;
             }
-            //Compute an Average for the number stored in the Grades List
+            //Compute an Average/highest/lowest for the number stored in the Grades List
             result /= grades.Count;
+            Console.WriteLine($"The highest grade is {highGrade}");
+            Console.WriteLine($"The lowest grade is {lowGrade}");
             Console.WriteLine($"The average grade is {result:N1}");
+
         }
     }
 }

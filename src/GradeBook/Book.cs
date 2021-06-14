@@ -21,6 +21,7 @@ namespace GradeBook
             // this.object - use when field has same name as parameter - explicit variable - on this object
             this.name = name;
         }
+        // Instance Member
         public void AddGrade(double grade)
         {
             grades.Add(grade);
