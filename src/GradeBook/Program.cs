@@ -10,6 +10,7 @@ namespace GradeBook
         // array is a collection of objects
         static void Main(string[] args)
         {
+            var book = new Book();
             // initialize a list called grades of type double for foating point numbers
             // List<double> grades = new List<double>() ;
 
