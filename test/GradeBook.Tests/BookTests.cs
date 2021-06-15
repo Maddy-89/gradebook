@@ -3,22 +3,24 @@ using Xunit;
 
 namespace GradeBook.Tests
 {
-    public class UnitTest1
+    public class BookTests
     {
         // Fact is an attribute - piece of data attached to the method test1
         [Fact]
         public void Test1()
         {
             // arrange
-            var x = 5;
-            var y = 2;
-            var expected = 7;
+            var book = new Book("");
+            book.AddGrade(89.1);
+            book.AddGrade(90.5);
+            book.AddGrade(77.3);
 
             // act
-            var actual = x * y;
-            
+            book.showStatistics();
+
+
             // assert
-            Assert.Equal(expected, actual);
+
         }
 
     }

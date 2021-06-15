@@ -11,7 +11,7 @@ namespace GradeBook
     // State, or data the class holds 
     // Behaviour Which acts on the state
     
-    class Book
+    public class Book
     {
         // Create an explicit constructor to initialize grades
         // Method on the class
