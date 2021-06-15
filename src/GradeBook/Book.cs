@@ -27,26 +27,24 @@ namespace GradeBook
         {
             grades.Add(grade);
         }
-
-        public void showStatistics()
+// Add statistics class identifier (return an object of type statistics)
+        public Statistics GetStatistics()
         {
-             //add a foreach loop statement to iterate through all numbers in the list and add them to the result variable
-            var result = 0.0;
-            var highGrade = double.MinValue;
-            var lowGrade = double.MaxValue;
+            var result = new Statistics();
+            result.Average = 0.0;
+            result.High = double.MinValue;
+            result.Low = double.MaxValue;
 
-            foreach (var number in grades)
+            foreach (var grade in grades)
             {   
-                lowGrade = Math.Min(number, lowGrade); 
-                highGrade = Math.Max(number, highGrade);
-
-                result += number;
+                result.Low = Math.Min(grade, result.Low); 
+                result.High = Math.Max(grade, result.High);
+                result.Average += grade;
             }
             //Compute an Average/highest/lowest for the number stored in the Grades List
-            result /= grades.Count;
-            Console.WriteLine($"The highest grade is {highGrade}");
-            Console.WriteLine($"The lowest grade is {lowGrade}");
-            Console.WriteLine($"The average grade is {result:N1}");
+            result.Average /= grades.Count;
+            return result;
+
         }
 
         // State - Add a field - to access grades 
