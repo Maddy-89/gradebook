@@ -19,8 +19,7 @@ namespace GradeBook
         public Book(string name)
         {
             grades = new List<double>();
-            // this.object - use when field has same name as parameter - explicit variable - on this object
-            this.name = name;
+            Name = name;
         }
         // Instance Member
         public void AddGrade(double grade)
@@ -49,6 +48,6 @@ namespace GradeBook
 
         // State - Add a field - to access grades 
         private List<double> grades; 
-        private string name;
+        public string Name;
     }
 }

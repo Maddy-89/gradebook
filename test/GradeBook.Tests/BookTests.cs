@@ -7,7 +7,7 @@ namespace GradeBook.Tests
     {
         // Fact is an attribute - piece of data attached to the method test1
         [Fact]
-        public void Test1()
+        public void BookCalculatesAverageGrades()
         {
             // arrange
             var book = new Book("");
