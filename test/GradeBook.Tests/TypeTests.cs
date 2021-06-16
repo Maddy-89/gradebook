@@ -5,7 +5,22 @@ namespace GradeBook.Tests
 {
     public class TypeTests
     {
-                [Fact]
+        [Fact]
+        public void ValueTypesAlsoPassByValue()
+        {
+            var x = GetInt();
+
+            Assert.Equal(3, x);
+        }
+        private void SetInt(int x)
+        {
+            x = 42;
+        }
+        private int GetInt()
+        {
+            return 3;
+        }
+        [Fact]
         public void CSharpisPassByRefs()
         {
             var book1 = GetBook("Book 1");
