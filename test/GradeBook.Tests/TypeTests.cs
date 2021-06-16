@@ -13,7 +13,7 @@ namespace GradeBook.Tests
 
             Assert.Equal("Book 1", book1.Name);
             Assert.Equal("Book 2", book2.Name);
-            Assert.NotSame(book1, book2)
+            Assert.NotSame(book1, book2);
 
         }
         [Fact]
