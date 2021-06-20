@@ -39,15 +39,12 @@ namespace GradeBook
             result.High = double.MinValue;
             result.Low = double.MaxValue;
 
-            var index = 0;
-            // while loop is better than do while as it will not start if array is null
-            // compared to Do While, will always execute atleast once
-            while(index < grades.Count)
+// for loop - (initializar a variable; condition to check before the runtime enters the loop; operation to perform after finishing the loop each time)
+            for(var index = 0; index < grades.Count; index += 1)
             {   
                 result.Low = Math.Min(grades[index], result.Low); 
                 result.High = Math.Max(grades[index], result.High);
                 result.Average += grades[index];
-                index += 1;
             };
             //Compute an Average/highest/lowest for the number stored in the Grades List
             result.Average /= grades.Count;
