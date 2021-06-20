@@ -40,6 +40,8 @@ namespace GradeBook
             result.Low = double.MaxValue;
 
             var index = 0;
+            // while loop is better than do while as it will not start if array is null
+            // compared to Do While, will always execute atleast once
             while(index < grades.Count)
             {   
                 result.Low = Math.Min(grades[index], result.Low); 
