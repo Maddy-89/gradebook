@@ -103,7 +103,22 @@ namespace GradeBook
         }
 
         // State - Add a field - to access grades 
-        private List<double> grades; 
-        public string Name;
+        private List<double> grades;
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                if(string.IsNullOrEmpty(value))
+                {
+                name = value;
+                }
+            }
+        }
+        private string name;
     }
 }
