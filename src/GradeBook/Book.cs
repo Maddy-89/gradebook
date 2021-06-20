@@ -24,7 +24,12 @@ namespace GradeBook
         // Instance Member
         public void AddGrade(double grade)
         {
-            grades.Add(grade);
+            if  (grade <= 100 && grade >= 0)
+            {
+                grades.Add(grade);
+            } else {
+                Console.Write("Invalid Value");
+            }
         }
 // Add statistics class identifier (return an object of type statistics)
         public Statistics GetStatistics()
