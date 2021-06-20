@@ -42,6 +42,12 @@ namespace GradeBook
 // for loop - (initializar a variable; condition to check before the runtime enters the loop; operation to perform after finishing the loop each time)
             for(var index = 0; index < grades.Count; index += 1)
             {   
+
+                if(grades[index] == 42.1)
+                {
+                    // break; - stop/leave loop
+                    // continue; - stop iteration and start next iteration
+                }
                 result.Low = Math.Min(grades[index], result.Low); 
                 result.High = Math.Max(grades[index], result.High);
                 result.Average += grades[index];
