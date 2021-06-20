@@ -33,7 +33,7 @@ namespace GradeBook
                 }
                 finally
                 {
-                    Console.WriteLine("**")
+                    Console.WriteLine("**");
                 }
             }
             
