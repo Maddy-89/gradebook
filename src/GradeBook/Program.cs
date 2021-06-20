@@ -9,9 +9,18 @@ namespace GradeBook
         {
             // Create a book variable from class Book - variable book refers to object of type Book
             var book = new Book("Maddy's grade Book");
-            book.AddGrade(89.1);
-            book.AddGrade(90.5);
-            book.AddGrade(77.5);
+
+            while (true)
+            {
+                Console.WriteLine("Enter a grade or 'q' to quit");
+                var input = Console.ReadLine();
+                if (input == "q")
+                {
+                    break;
+                }
+                var grade = double.Parse(input);
+                book.AddGrade(grade);
+            }
             
             var stats = book.GetStatistics();
             Console.WriteLine($"The highest grade is {stats.High}");
