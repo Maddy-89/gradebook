@@ -105,10 +105,12 @@ namespace GradeBook
         // State - Add a field - to access grades 
         private List<double> grades;
 
+// read only property (set is private)
         public string Name
         {
             get; 
             private set;
         }
+        readonly string category = "Science";
     }
 }
