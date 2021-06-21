@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
+    // Define an event
+    public delegate void GradeAddedDelegate(object sender, EventArgs args);
     class Program
     {
         static void Main(string[] args)
