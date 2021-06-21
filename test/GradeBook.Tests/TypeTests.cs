@@ -3,8 +3,25 @@ using Xunit;
 
 namespace GradeBook.Tests
 {
+    public delegate string WriteLogDelegate(string logMessage);
     public class TypeTests
     {
+        [Fact]
+        public void WriteLogDelegateCanPointToMethod()
+        {
+            WriteLogDelegate log;
+
+            log = new WriteLogDelegate(ReturnMessage);
+
+            var result = log("Hello!");
+            Assert.Equal("Hello!", result);
+        }
+
+        string ReturnMessage(string message)
+        {
+            return message;
+        } 
+
         [Fact]
         public void StringsbehaveLikeValueTypes()
         {
@@ -26,9 +43,9 @@ namespace GradeBook.Tests
 
             Assert.Equal(42, x);
         }
-        private void SetInt(ref int x)
+        private void SetInt(ref Int32 z)
         {
-            x = 42;
+            z = 42;
         }
         private int GetInt()
         {
