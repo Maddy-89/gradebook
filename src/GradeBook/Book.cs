@@ -3,20 +3,23 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
-    // Create a new Class called Book
-    // Define a Method called AddGrade
+    public delegate void GradeAddedDelegate(object sender, EventArgs args);
 
-    // What that means is how can i give the class the right members so other developers can understand what it si doing.
-    // Add Members - What it can do
-    // State, or data the class holds 
-    // Behaviour Which acts on the state
-    
-    public class Book
+    public class NamedObject
     {
-        // Create an explicit constructor to initialize grades
-        // Method on the class
-        // Add a constructor Parameter
-        public Book(string name)
+        public NamedObject(string name)
+        {
+            Name = name;
+        }
+        public string Name
+        {
+            get;
+            set;
+        }
+    }
+    public class Book :NamedObject
+    {
+        public Book(string name) : base(name)
         {
             grades = new List<double>();
             Name = name;
@@ -109,13 +112,6 @@ namespace GradeBook
 
         // State - Add a field - to access grades 
         private List<double> grades;
-
-// read only property (set is private)
-        public string Name
-        {
-            get; 
-            set;
-        }
         public const string CATEGORY = "Science";
     }
 }

@@ -3,21 +3,13 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
-    // Define an event
-    public delegate void GradeAddedDelegate(object sender, EventArgs args);
     class Program
     {
         static void Main(string[] args)
         {
             // Create a book variable from class Book - variable book refers to object of type Book
-            var book = new Book("Maddy's grade Book");
+            var book = new Book("Maddy's Grade Book");
             book.GradeAdded += OnGradeAdded;
-            book.GradeAdded += OnGradeAdded;
-            book.GradeAdded -= OnGradeAdded;
-            book.GradeAdded += OnGradeAdded;
-
-
-
 
             while (true)
             {
