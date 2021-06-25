@@ -8,13 +8,12 @@ namespace GradeBook
         static void Main(string[] args)
         {
             // Create a book variable from class Book - variable book refers to object of type Book
-            var book = new InMemoryBook("Maddy's Grade Book");
+            IBook book = new DiskBook("Maddy's Grade Book");
             book.GradeAdded += OnGradeAdded;
             EnterGrades(book);
 
             var stats = book.GetStatistics();
 
-            Console.WriteLine(InMemoryBook.CATEGORY);
             Console.WriteLine($"For the book named {book.Name}");
             Console.WriteLine($"The highest grade is {stats.High}");
             Console.WriteLine($"The lowest grade is {stats.Low}");
